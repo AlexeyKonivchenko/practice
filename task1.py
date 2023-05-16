@@ -21,6 +21,6 @@ tag = '#'
 if len(hashtags) < 140 and len(hashtags) != 0:
     for i in hashtags:
         tag += i.title()
+        print(tag)
 else:
     print(False)
-print(tag)
