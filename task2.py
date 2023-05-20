@@ -23,3 +23,17 @@ def first_non_repeating_letter(a):
             break
     return c
 print(first_non_repeating_letter(input()))
+
+# Твое решение действительно работает
+# Но давай попробуем сделать его короче
+# Моё решение:
+def first_non_repeating_letter(string):
+    for i in list(string.lower()):
+        if list(string.lower()).count(i) == 1:
+            return list(string)[list(string.lower()).index(i)]
+    return ''
+# Проанализируй где ты можешь сократить свой код
+# Как сказал мой ревьювер на курсах от Яндекс.Практикума:
+# "мы же не индусы, которым платят за количество строк"
+# Хотя, в случае Билли...
+# ХПАХПАХАПХАПХАПХ
