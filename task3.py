@@ -41,3 +41,19 @@ print(function(input()))
 # B
 
 print([int(i) * 2 for i in input().split()])
+
+# Ух ты, ты решил эту задачу лучше, чем я в своё время, красавчик!
+def solution(s):
+    s = list(s)
+    if len(s)%2 != 0:
+        s.append('_')
+    result = []
+    while len(s) > 0:
+        result.append(s[0]+s[1])
+        s.pop(0)
+        s.pop(0)
+    return result
+
+# B
+
+print([int(i) * 2 for i in input().split()])  # идеально, молодец
