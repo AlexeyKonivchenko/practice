@@ -34,3 +34,20 @@ def find_outlier(arr):
 
     return last_even if num_even == 1 else last_odd
 print(find_outlier([int(i) for i in input().split()]))
+
+# Интересная имплементация временных переменных last_even и last_odd. Прям навеяло одну из задач прошлого комплекта.
+# Молодец!
+
+# Также можно решить через словари:
+def find_outlier(integers):
+    evens = []
+    odds = []
+    even_counter = 0
+    for integer in integers:
+        if integer%2 == 0:
+            evens.append(integer)
+        else:
+            odds.append(integer)
+    if len(evens) > 1:
+        return odds[0]
+    return evens[0]
